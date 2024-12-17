@@ -1,5 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import { generateYears } from '../../utils/generateYears';
+import { generateDays } from '../../utils/generateDays';
+
+const years = generateYears(1900, 2099);
+const days = generateDays();
 
 export const Form = () => {
   return (
@@ -67,18 +72,17 @@ export const Form = () => {
               id="number_guess"
               name="number_guess"
               placeholder="Insira o número de convidados"
-              required
             />
           </div>
           <div className="col-12 mb-3">
             Data e hora de chegada <span className="optional">*</span>
           </div>
           <div className="col-12 mb-3 col-md-4 col-md-4">
-            <input type="date" className="form-control" name="date" required />
+            <input type="date" className="form-control" name="date" />
           </div>
 
           <div className="col-8 mb-3 col-md-4 col-md-4">
-            <input type="time" className="form-control" name="hour" required />
+            <input type="time" className="form-control" name="hour" />
           </div>
 
           <div className="col-4 mb-3 col-md-2 col-md-2">
@@ -93,7 +97,20 @@ export const Form = () => {
           </div>
 
           <div className="col-12 col-md-4 col-lg-4 mb-3">
-            <select id="selectedMouth" className="form-select" required>
+            <select id="selectedYear" className="form-select">
+              <option value="" disabled selected>
+                Dia
+              </option>
+              {days.map((day) => (
+                <option key={day} value={day}>
+                  {day}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="col-12 col-md-4 col-lg-4 mb-3">
+            <select id="selectedMouth" className="form-select">
               <option value="" disabled selected>
                 Mês
               </option>
@@ -109,6 +126,19 @@ export const Form = () => {
               <option value="10">Outubro</option>
               <option value="11">Novembro</option>
               <option value="12">Dezembro</option>
+            </select>
+          </div>
+
+          <div className="col-12 col-md-4 col-lg-4 mb-3">
+            <select id="selectedYear" className="form-select">
+              <option value="" disabled selected>
+                Ano
+              </option>
+              {years.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
             </select>
           </div>
         </div>

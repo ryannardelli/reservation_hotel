@@ -1,3 +1,7 @@
 .optional {
   color: #b22222;
 }
+
+.form-label {
+  font-weight: bold;
+}

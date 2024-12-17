@@ -74,7 +74,7 @@ export const Form = () => {
               placeholder="Insira o número de convidados"
             />
           </div>
-          <div className="col-12 mb-3">
+          <div className="col-12 mb-3 fw-bold">
             Data e hora de chegada <span className="optional">*</span>
           </div>
           <div className="col-12 mb-3 col-md-4 col-md-4">
@@ -92,7 +92,7 @@ export const Form = () => {
             </select>
           </div>
 
-          <div className="col-12 mb-3">
+          <div className="col-12 mb-3 fw-bold">
             Data de partida <span className="optional">*</span>
           </div>
 
@@ -140,6 +140,45 @@ export const Form = () => {
                 </option>
               ))}
             </select>
+          </div>
+
+          <div className="col-12 mb-2 fw-bold">
+            Gostaria de coleta grátis? <span className="optional">*</span>
+          </div>
+
+          <div className="container">
+            <div className="row">
+              <div className="col-12 col-md-6 mb-3">
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    className="form-check-input"
+                    id="yes"
+                    name="free-pickup"
+                    value="free-picup-yes"
+                    checked
+                  />
+                  <label className="form-check-label" htmlFor="yes">
+                    Sim. Eu gostaria de coleta grátis.
+                  </label>
+                </div>
+              </div>
+
+              <div className="col-12 col-md-6 mb-3">
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    className="form-check-input"
+                    id="free-pickup_no"
+                    name="free-pickup"
+                    value="no"
+                  />
+                  <label className="form-check-label" htmlFor="free-pickup_no">
+                    Não. Obrigado, mas eu não quero coleta grátis.
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </form>

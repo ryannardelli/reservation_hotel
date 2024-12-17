@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchImages } from '../../utils/fetchImages';
 import { BackgroundWithImages } from '../../components/BackgroundWithImages';
 import { HeroSection } from '../../components/HeroSection';
+import { Form } from '../../components/Form';
 import './styles.css';
 
 export const Home = () => {
@@ -33,6 +34,7 @@ export const Home = () => {
         <p>Aguarde...</p>
       )}
       <HeroSection />
+      <Form />
     </div>
   );
 };

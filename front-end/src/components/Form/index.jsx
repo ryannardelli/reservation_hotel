@@ -51,7 +51,7 @@ export const Form = () => {
               <option value="presidential">Suíte Presidencial</option>
             </select>
           </div>
-          <div className="mb-3 col-12 col-md-6 col-lg-6">
+          <div className="mb-3 col-12 col-md-4 col-lg-4">
             <label htmlFor="number_guess" className="form-label">
               Número de convidados <span className="optional">*</span>
             </label>
@@ -63,6 +63,47 @@ export const Form = () => {
               placeholder="Insira o número de convidados"
               required
             />
+          </div>
+          <div className="col-12 mb-3">
+            Data e hora de chegada <span className="optional">*</span>
+          </div>
+          <div className="col-12 mb-3 col-md-4 col-md-4">
+            <input type="date" className="form-control" name="date" required />
+          </div>
+
+          <div className="col-8 mb-3 col-md-4 col-md-4">
+            <input type="time" className="form-control" name="hour" required />
+          </div>
+
+          <div className="col-4 mb-3 col-md-2 col-md-2">
+            <select id="hourSelected" className="form-select">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+
+          <div className="col-12 mb-3">
+            Data de partida <span className="optional">*</span>
+          </div>
+
+          <div className="col-12 col-md-4 col-lg-4 mb-3">
+            <select id="selectedMouth" className="form-select" required>
+              <option value="" disabled selected>
+                Mês
+              </option>
+              <option value="1">Janeiro</option>
+              <option value="2">Fevereiro</option>
+              <option value="3">Março</option>
+              <option value="4">Abril</option>
+              <option value="5">Maio</option>
+              <option value="6">Junho</option>
+              <option value="7">Julho</option>
+              <option value="8">Agosto</option>
+              <option value="9">Setembro</option>
+              <option value="10">Outubro</option>
+              <option value="11">Novembro</option>
+              <option value="12">Dezembro</option>
+            </select>
           </div>
         </div>
       </form>

@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
 import { fetchImages } from '../../utils/fetchImages';
-import { BackgroundWithImages } from '../../components/BackgroundWithImages'; // Supondo que você tenha exportado esse componente estilizado
+import { BackgroundWithImages } from '../../components/BackgroundWithImages';
+import { HeroSection } from '../../components/HeroSection';
+import './styles.css';
 
 export const Home = () => {
   const [backgroundImage, setBackgroundImage] = useState('');
@@ -30,6 +32,7 @@ export const Home = () => {
       ) : (
         <p>Aguarde...</p>
       )}
+      <HeroSection />
     </div>
   );
 };

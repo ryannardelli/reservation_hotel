@@ -10,7 +10,7 @@ const BackgroundImage = styled.img`
 // Estilizando o contêiner das imagens sobrepostas
 const OverlayImagesContainer = styled.div`
   position: absolute; /* Posiciona as imagens sobre a imagem de fundo */
-  top: -20px;
+  top: -60px;
   left: 0;
   width: 100%;
   height: 100%;

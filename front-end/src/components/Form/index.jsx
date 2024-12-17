@@ -24,6 +24,7 @@ export const Form = () => {
               required
             />
           </div>
+
           <div className="mb-3 col-12 col-md-4 col-lg-4">
             <label htmlFor="lastName" className="form-label">
               Sobrenome
@@ -37,6 +38,7 @@ export const Form = () => {
               required
             />
           </div>
+
           <div className="mb-3 col-12 col-md-4 col-lg-4">
             <label htmlFor="email" className="form-label">
               E-mail
@@ -50,6 +52,7 @@ export const Form = () => {
               required
             />
           </div>
+
           <div className="mb-3 col-12 col-md-6 col-lg-6">
             <label htmlFor="roomType" className="form-label">
               Tipo de quarto
@@ -62,7 +65,8 @@ export const Form = () => {
               <option value="presidential">Suíte Presidencial</option>
             </select>
           </div>
-          <div className="mb-3 col-12 col-md-4 col-lg-4">
+
+          <div className="mb-3 col-12 col-md-6 col-lg-4">
             <label htmlFor="number_guess" className="form-label">
               Número de convidados <span className="optional">*</span>
             </label>
@@ -74,9 +78,11 @@ export const Form = () => {
               placeholder="Insira o número de convidados"
             />
           </div>
+
           <div className="col-12 mb-3 fw-bold">
             Data e hora de chegada <span className="optional">*</span>
           </div>
+
           <div className="col-12 mb-3 col-md-4 col-md-4">
             <input type="date" className="form-control" name="date" />
           </div>
@@ -153,12 +159,12 @@ export const Form = () => {
                   <input
                     type="radio"
                     className="form-check-input"
-                    id="yes"
+                    id="free-pickup_yes"
                     name="free-pickup"
                     value="free-picup-yes"
                     checked
                   />
-                  <label className="form-check-label" htmlFor="yes">
+                  <label className="form-check-label" htmlFor="free-pickup_yes">
                     Sim. Eu gostaria de coleta grátis.
                   </label>
                 </div>
@@ -171,7 +177,7 @@ export const Form = () => {
                     className="form-check-input"
                     id="free-pickup_no"
                     name="free-pickup"
-                    value="no"
+                    value="free-picup-no"
                   />
                   <label className="form-check-label" htmlFor="free-pickup_no">
                     Não. Obrigado, mas eu não quero coleta grátis.

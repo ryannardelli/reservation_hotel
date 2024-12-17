@@ -9,15 +9,15 @@ const BackgroundImage = styled.img`
 
 // Estilizando o contêiner das imagens sobrepostas
 const OverlayImagesContainer = styled.div`
-  position: absolute; /* Posiciona as imagens sobre a imagem de fundo */
-  top: -60px;
+  position: relative; /* Posiciona as imagens sobre a imagem de fundo */
+  top: -80px;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none;
+  pointer-events: none
 `;
 
 // Estilizando as imagens sobrepostas
@@ -26,6 +26,10 @@ const OverlayImage = styled.img`
   height: 150px;
   margin: 10px;
   object-fit: contain;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const BackgroundWithImages = ({ backgroundImage, images }) => {

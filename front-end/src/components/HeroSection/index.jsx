@@ -4,7 +4,7 @@ export const HeroSection = () => {
   return (
     <div>
       <h1>Hotel Sol e Mar</h1>
-      <p>Seu refúgio de conforto</p>
+      <p>Faça já a sua reserva!</p>
     </div>
   );
 };

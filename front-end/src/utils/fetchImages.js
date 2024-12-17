@@ -22,10 +22,10 @@ export const fetchImages = async (apiKey) => {
     const data = await response.json();
 
     // Aqui estamos pegando a primeira imagem para o background
-    const background = data.photos[0].src.large;
+    const background = data.photos[1].src.original;
 
     // Pegando as próximas 3 imagens para overlay
-    const overlay = data.photos.slice(0, 4).map((photo) => photo.src.small);
+    const overlay = data.photos.slice(0, 4).map((photo) => photo.src.original);
 
     return { backgroundImage: background, overlayImages: overlay };
   } catch (error) {

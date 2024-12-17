@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
 import { fetchImages } from '../../utils/fetchImages';
+import { BackgroundWithImages } from '../../components/BackgroundWithImages'; // Supondo que você tenha exportado esse componente estilizado
 
 export const Home = () => {
   const [backgroundImage, setBackgroundImage] = useState('');
@@ -20,27 +21,14 @@ export const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container-fluid p-0">
       {backgroundImage && overlayImages.length > 0 ? (
-        <div>
-          <img
-            src={backgroundImage}
-            alt="Background"
-            className="background-image"
-          />
-          <div className="overlay-images">
-            {overlayImages.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Overlay ${index + 1}`}
-                className="overlay-image"
-              />
-            ))}
-          </div>
-        </div>
+        <BackgroundWithImages
+          backgroundImage={backgroundImage}
+          images={overlayImages}
+        />
       ) : (
-        <p>Carregando imagens...</p>
+        <p>Aguarde...</p>
       )}
     </div>
   );

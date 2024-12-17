@@ -6,7 +6,10 @@ export const Form = () => {
     <div className="container">
       <form autoComplete="off">
         <div className="row">
-          <div className="mb-3 col-12 col-md-4 col-lg-4 form-floating">
+          <div className="mb-3 col-12 col-md-4 col-lg-4">
+            <label htmlFor="name" className="form-label">
+              Nome
+            </label>
             <input
               type="text"
               className="form-control"
@@ -15,9 +18,11 @@ export const Form = () => {
               placeholder="Insira seu nome"
               required
             />
-            <label htmlFor="name">Nome</label>
           </div>
-          <div className="mb-3 col-12 col-md-4 col-lg-4 form-floating">
+          <div className="mb-3 col-12 col-md-4 col-lg-4">
+            <label htmlFor="lastName" className="form-label">
+              Sobrenome
+            </label>
             <input
               type="text"
               className="form-control"
@@ -26,9 +31,11 @@ export const Form = () => {
               placeholder="Insira seu sobrenome"
               required
             />
-            <label htmlFor="lastName">Sobrenome</label>
           </div>
-          <div className="mb-3 col-12 col-md-4 col-lg-4 form-floating">
+          <div className="mb-3 col-12 col-md-4 col-lg-4">
+            <label htmlFor="email" className="form-label">
+              E-mail
+            </label>
             <input
               type="email"
               className="form-control"
@@ -37,7 +44,6 @@ export const Form = () => {
               placeholder="Insira seu email"
               required
             />
-            <label htmlFor="email">E-mail</label>
           </div>
           <div className="mb-3 col-12 col-md-6 col-lg-6">
             <label htmlFor="roomType" className="form-label">

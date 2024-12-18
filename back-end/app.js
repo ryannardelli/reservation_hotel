@@ -4,6 +4,8 @@ const app = express();
 const conn = require('./db/conn');
 const cors = require('cors');
 const mainController = require('./controllers/Main');
+const Reservation = require('./models/Reservation');
+const db = require('./db/conn');
 
 app.use(
     express.urlencoded({
@@ -16,8 +18,8 @@ app.use(cors());
 // routes
 app.use('/api/teste', mainController.init);
 
-conn
-  .sync()
+db
+  .sync({force: true})
   .then(() => {
     app.listen(3000, () => {
       console.log('Servidor rodando na porta 3000');

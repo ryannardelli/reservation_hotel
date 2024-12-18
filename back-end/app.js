@@ -5,6 +5,7 @@ const conn = require('./db/conn');
 const cors = require('cors');
 const mainController = require('./controllers/Main');
 const Reservation = require('./models/Reservation');
+const createReservation = require('./routes/create');
 const db = require('./db/conn');
 
 app.use(
@@ -13,13 +14,14 @@ app.use(
     })
 );
 
+app.use(express.json());
 app.use(cors());
 
 // routes
-app.use('/api/teste', mainController.init);
+app.use('/', createReservation);
 
 db
-  .sync({force: true})
+  .sync()
   .then(() => {
     app.listen(3000, () => {
       console.log('Servidor rodando na porta 3000');

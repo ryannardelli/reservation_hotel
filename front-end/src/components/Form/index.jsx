@@ -103,7 +103,7 @@ export const Form = () => {
           </div>
 
           <div className="col-12 col-md-4 col-lg-4 mb-3">
-            <select id="selectedYear" className="form-select">
+            <select id="selectedDay" className="form-select">
               <option value="" disabled selected>
                 Dia
               </option>
@@ -148,9 +148,7 @@ export const Form = () => {
             </select>
           </div>
 
-          <div className="col-12 mb-2 fw-bold">
-            Gostaria de coleta grátis? <span className="optional">*</span>
-          </div>
+          <div className="col-12 mb-2 fw-bold">Gostaria de coleta grátis?</div>
 
           <div className="container">
             <div className="row">
@@ -186,6 +184,28 @@ export const Form = () => {
               </div>
             </div>
           </div>
+
+          <div className="form-group mb-3">
+            <label htmlFor="requestEspecial" className="form-label">
+              {' '}
+              Pedido Especial <span className="optional">*</span>
+            </label>
+            <textarea
+              className="form-control"
+              id="requestEspecial"
+              name="requestEspecial"
+              rows="6"
+              placeholder="Digite seu texto aqui"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            id="btn-reservation"
+            className="btn btn-success mb-4"
+          >
+            Fazer Reserva
+          </button>
         </div>
       </form>
     </div>

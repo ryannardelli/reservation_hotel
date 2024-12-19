@@ -32,7 +32,6 @@ export const Home = () => {
   const handleSubmit = async (formData) => {
     console.log('Enviando dados do formulário:', formData);
 
-    // Chama a função sendReservation com os dados do formulário
     const result = await sendReservation(formData);
 
     if (result.success) {
@@ -72,15 +71,13 @@ export const Home = () => {
           )}
           <HeroSection />
 
-          {/* Exibir a mensagem de feedback */}
           {feedback && (
             <div
-              className={`alert ${feedback.includes('sucesso') ? 'alert-success' : 'alert-danger'} alert-dismissible fade show w-50 mx-auto`}
+              className={`alert ${feedback.includes('sucesso') ? 'alert-success' : 'alert-danger'} alert-dismissible fade show mx-3 mx-md-auto mx-lg-auto text-center `}
               role="alert"
             >
               {feedback}
 
-              {/* Botão para fechar o alerta */}
               <button
                 type="button"
                 className="btn-close"

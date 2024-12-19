@@ -35,10 +35,18 @@ p {
   color: black;
 }
 
+.alert {
+  width: 40%;
+}
+
 @media (max-width: 991px) {
   h1 {
     text-align: center;
     margin-top: -70px;
+  }
+
+  .alert {
+    width: 90%;
   }
 }
 

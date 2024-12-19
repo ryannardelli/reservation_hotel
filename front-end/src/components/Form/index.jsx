@@ -18,7 +18,7 @@ export const Form = ({ handleSubmit }) => {
     numberGuest: null,
     dateArrival: null,
     hourArrival: null,
-    turn: 'AM',
+    turn: null,
     dayDeparture: null,
     monthDeparture: null,
     yearDeparture: null,
@@ -28,7 +28,19 @@ export const Form = ({ handleSubmit }) => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    await handleSubmit(formData);
+
+    const validNumberGuest =
+      formData.numberGuest && !isNaN(formData.numberGuest)
+        ? formData.numberGuest
+        : null;
+
+    const updatedFormData = {
+      ...formData,
+      numberGuest: validNumberGuest,
+    };
+
+    await handleSubmit(updatedFormData);
+
     setFormData({
       firstName: '',
       lastName: '',
@@ -37,7 +49,7 @@ export const Form = ({ handleSubmit }) => {
       numberGuest: '',
       dateArrival: '',
       hourArrival: '',
-      turn: 'AM',
+      turn: '',
       dayDeparture: '',
       monthDeparture: '',
       yearDeparture: '',
@@ -182,6 +194,9 @@ export const Form = ({ handleSubmit }) => {
                 setFormData({ ...formData, turn: e.target.value })
               }
             >
+              <option value="" disabled selected>
+                --
+              </option>
               <option value="AM">AM</option>
               <option value="PM">PM</option>
             </select>

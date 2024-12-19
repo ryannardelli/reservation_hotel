@@ -29,6 +29,21 @@ export const Form = ({ handleSubmit }) => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     await handleSubmit(formData);
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      typeRoom: '',
+      numberGuest: '',
+      dateArrival: '',
+      hourArrival: '',
+      turn: 'AM',
+      dayDeparture: '',
+      monthDeparture: '',
+      yearDeparture: '',
+      freePickup: true,
+      specialRequest: '',
+    });
   };
 
   return (
@@ -42,10 +57,10 @@ export const Form = ({ handleSubmit }) => {
             <input
               type="text"
               className="form-control"
-              id="name"
-              name="name"
+              id="firstName"
+              name="firstName"
               placeholder="Insira seu nome"
-              value={formData.name}
+              value={formData.firstName}
               onChange={(e) =>
                 setFormData({ ...formData, firstName: e.target.value })
               }

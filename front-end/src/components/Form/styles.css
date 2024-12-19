@@ -5,3 +5,9 @@
 .form-label {
   font-weight: bold;
 }
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #007bff !important;
+}

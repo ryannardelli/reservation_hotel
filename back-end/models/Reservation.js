@@ -43,17 +43,17 @@ const Reservation = db.define('Reservation', {
     },
 
     dayDeparture: {
-        type: DataTypes.DATE,
+        type: DataTypes.INTEGER,
         allowNull: true,
     },
 
-    mouthDeparture: {
-        type: DataTypes.DATE,
+    monthDeparture: {
+        type: DataTypes.STRING,
         allowNull: true,
     },
 
     yearDeparture: {
-        type: DataTypes.DATE,
+        type: DataTypes.INTEGER,
         allowNull: true,
     },
 

@@ -11,19 +11,19 @@ const days = generateDays();
 
 export const Form = ({ handleSubmit }) => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    typeRoom: '',
-    numberGuest: '',
-    dateArrival: '',
-    hourArrival: '',
+    firstName: null,
+    lastName: null,
+    email: null,
+    typeRoom: null,
+    numberGuest: null,
+    dateArrival: null,
+    hourArrival: null,
     turn: 'AM',
-    dayDeparture: '',
-    monthDeparture: '',
-    yearDeparture: '',
+    dayDeparture: null,
+    monthDeparture: null,
+    yearDeparture: null,
     freePickup: true,
-    specialRequest: '',
+    specialRequest: null,
   });
 
   const onSubmitHandler = async (e) => {
@@ -96,11 +96,15 @@ export const Form = ({ handleSubmit }) => {
             <select
               className="form-select"
               id="typeRoom"
+              required
               value={formData.typeRoom}
               onChange={(e) =>
                 setFormData({ ...formData, typeRoom: e.target.value })
               }
             >
+              <option value="" disabled selected>
+                Selecione o tipo de quarto
+              </option>
               <option value="Individual">Quarto Individual</option>
               <option value="Duplo">Quarto Duplo</option>
               <option value="Suíte">Suíte</option>
@@ -194,7 +198,7 @@ export const Form = ({ handleSubmit }) => {
 
           <div className="col-12 col-md-4 col-lg-4 mb-3">
             <select
-              id="selectedMouth"
+              id="selectedMonth"
               className="form-select"
               value={formData.monthDeparture}
               onChange={(e) =>
@@ -204,18 +208,18 @@ export const Form = ({ handleSubmit }) => {
               <option value="" disabled selected>
                 Mês
               </option>
-              <option value="1">Janeiro</option>
-              <option value="2">Fevereiro</option>
-              <option value="3">Março</option>
-              <option value="4">Abril</option>
-              <option value="5">Maio</option>
-              <option value="6">Junho</option>
-              <option value="7">Julho</option>
-              <option value="8">Agosto</option>
-              <option value="9">Setembro</option>
-              <option value="10">Outubro</option>
-              <option value="11">Novembro</option>
-              <option value="12">Dezembro</option>
+              <option value="Janeiro">Janeiro</option>
+              <option value="Fevereiro">Fevereiro</option>
+              <option value="Março">Março</option>
+              <option value="Abril">Abril</option>
+              <option value="Maio">Maio</option>
+              <option value="Junho">Junho</option>
+              <option value="Julho">Julho</option>
+              <option value="Agosto">Agosto</option>
+              <option value="Setembro">Setembro</option>
+              <option value="Outubro">Outubro</option>
+              <option value="Novembro">Novembro</option>
+              <option value="Dezembro">Dezembro</option>
             </select>
           </div>
 

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Hotel Sol e Mar
+    </h1>
+    <p>
+      Faça já a sua reserva!
+    </p>
+  </div>
+</DocumentFragment>
+`;

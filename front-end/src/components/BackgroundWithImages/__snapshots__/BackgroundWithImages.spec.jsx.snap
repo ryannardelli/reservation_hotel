@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackgroundWithImages Component matches snapshot 1`] = `
+<DocumentFragment>
+  <img
+    alt="background"
+    class="sc-blHHSb cXzvFF"
+    src="https://example.com/background.jpg"
+  />
+  <div
+    class="sc-gtLWhw hXGzWP"
+  >
+    <img
+      alt="Overlay 1"
+      class="sc-egkSDF jUQtYF"
+      src="https://example.com/image1.jpg"
+    />
+    <img
+      alt="Overlay 2"
+      class="sc-egkSDF jUQtYF"
+      src="https://example.com/image2.jpg"
+    />
+  </div>
+</DocumentFragment>
+`;

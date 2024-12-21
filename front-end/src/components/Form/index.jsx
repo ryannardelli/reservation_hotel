@@ -35,13 +35,14 @@ export const Form = ({ handleSubmit }) => {
 
     const updatedFormData = {
       ...formData,
-      numberGuest: formData.numberGuest || null,
+      numberGuest: validNumberGuest || null,
       dayDeparture: formData.dayDeparture || null,
       monthDeparture: formData.monthDeparture || null,
       yearDeparture: formData.yearDeparture || null,
       dateArrival: formData.dateArrival || null,
       hourArrival: formData.hourArrival || null,
       turn: formData.turn || null,
+      specialRequest: formData.specialRequest || null,
     };
 
     await handleSubmit(updatedFormData);

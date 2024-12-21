@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { generateYears } from '../../utils/generateYears';
 import { generateDays } from '../../utils/generateDays';
-import { sendReservation } from '../../utils/sendReservation';
 import { useState } from 'react';
 import P from 'prop-types';
 
@@ -34,9 +33,20 @@ export const Form = ({ handleSubmit }) => {
         ? formData.numberGuest
         : null;
 
+    // let updatedFormData = {
+    //   ...formData,
+    //   numberGuest: validNumberGuest,
+    // };
+
     const updatedFormData = {
       ...formData,
-      numberGuest: validNumberGuest,
+      numberGuest: formData.numberGuest || null,
+      dayDeparture: formData.dayDeparture || null,
+      monthDeparture: formData.monthDeparture || null,
+      yearDeparture: formData.yearDeparture || null,
+      dateArrival: formData.dateArrival || null,
+      hourArrival: formData.hourArrival || null,
+      turn: formData.turn || null,
     };
 
     await handleSubmit(updatedFormData);

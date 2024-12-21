@@ -155,6 +155,9 @@ export const Form = ({ handleSubmit }) => {
               className="form-control"
               id="number_guess"
               name="number_guess"
+              pattern="\d*"
+              inputMode="numeric"
+              title="Digite apenas números"
               placeholder="Insira o número de convidados"
               value={formData.numberGuest}
               onChange={(e) =>

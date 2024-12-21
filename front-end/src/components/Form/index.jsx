@@ -33,11 +33,6 @@ export const Form = ({ handleSubmit }) => {
         ? formData.numberGuest
         : null;
 
-    // let updatedFormData = {
-    //   ...formData,
-    //   numberGuest: validNumberGuest,
-    // };
-
     const updatedFormData = {
       ...formData,
       numberGuest: formData.numberGuest || null,

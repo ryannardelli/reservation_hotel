@@ -11,7 +11,7 @@ export const Home = () => {
   const [backgroundImage, setBackgroundImage] = useState('');
   const [overlayImages, setOverlayImages] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [feedback, setFeedback] = useState(''); // Estado para feedback
+  const [feedback, setFeedback] = useState('');
 
   useEffect(() => {
     const loadImages = async () => {

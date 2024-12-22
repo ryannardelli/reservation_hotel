@@ -129,6 +129,7 @@ export const Form = ({ handleSubmit }) => {
             <select
               className="form-select"
               id="typeRoom"
+              data-testid="typeRoom"
               required
               value={formData.typeRoom}
               onChange={(e) =>

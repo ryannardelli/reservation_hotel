@@ -21,7 +21,7 @@ app.use(cors());
 app.use('/', createReservation);
 
 db
-  .sync({force: true})
+  .sync()
   .then(() => {
     app.listen(3000, () => {
       console.log('Servidor rodando na porta 3000');

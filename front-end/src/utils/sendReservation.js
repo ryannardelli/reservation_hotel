@@ -6,10 +6,8 @@ export const sendReservation = async (formData) => {
       body: JSON.stringify(formData),
     });
     const data = await response.json();
-    console.log('Resposta do backend:', data);
     return { data, success: response.ok };
   } catch (e) {
-    console.log('Erro ao enviar dados: ', e);
     return {
       success: false,
       error: 'Erro ao enviar os dados. Tente novamente mais tarde.',
